@@ -345,8 +345,8 @@ if __name__=='__main__':
             subprocess.check_output("mkdir /root/oscp/exam/" + scanip + "/exploits", shell=True)
             subprocess.check_output("mkdir /root/oscp/exam/" + scanip + "/privesc", shell=True)
             print bcolors.OKGREEN + "INFO: Folder created here: " + "/root/oscp/exam/" + scanip + bcolors.ENDC
-            subprocess.check_output("cp /root/oscp/reports/windows-template.md /root/oscp/exam/" + scanip + "/mapping-windows.md", shell=True)
-            subprocess.check_output("cp /root/oscp/reports/linux-template.md /root/oscp/exam/" + scanip + "/mapping-linux.md", shell=True)
+            subprocess.check_output("cp /root/oscp/windows-template.md /root/oscp/exam/" + scanip + "/mapping-windows.md", shell=True)
+            subprocess.check_output("cp /root/oscp/linux-template.md /root/oscp/exam/" + scanip + "/mapping-linux.md", shell=True)
             print bcolors.OKGREEN + "INFO: Added pentesting templates: " + "/root/oscp/exam/" + scanip + bcolors.ENDC
             subprocess.check_output("sed -i -e 's/INSERTIPADDRESS/" + scanip + "/g' /root/oscp/exam/" + scanip + "/mapping-windows.md", shell=True)
             subprocess.check_output("sed -i -e 's/INSERTIPADDRESS/" + scanip + "/g' /root/oscp/exam/" + scanip + "/mapping-linux.md", shell=True)
